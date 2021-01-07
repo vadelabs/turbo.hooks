@@ -1,4 +1,4 @@
-(ns com.vadelabs.turbo.dom-card
+(ns com.vadelabs.turbo.layouts-card
   (:require
    [devcards.core :as dc])
   (:require-macros

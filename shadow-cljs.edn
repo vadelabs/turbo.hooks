@@ -15,20 +15,21 @@
                                 :output-wrapper false}
              :devtools         {:after-load user/restart
                                 :preloads   []}}
+
             :project/cards
             {:target           :browser
              :output-dir       "resources/public/js/cards"
              :asset-path       "/js/cards"
              :modules          {:shared {}
-                                :main   {:init-fn    com.vadelabs.turbo.hooks-card/start
-                                         :entries    [com.vadelabs.turbo.dom-card]
+                                :main   {:init-fn    com.vadelabs.turbo.layouts-card/start
+                                         :entries    [com.vadelabs.turbo.layouts-card]
                                          :depends-on #{:shared}}}
              :compiler-options {:devcards           true
                                 :output-feature-set :es8
                                 :output-wrapper false}
              :build-options {:ns-aliases {devcards-marked cljsjs.marked
                                           devcards-syntax-highlighter cljsjs.highlight}}
-             :devtools {:after-load com.vadelabs.turbo.hooks-card/restart
+             :devtools {:after-load com.vadelabs.turbo.layouts-card/restart
                         :preloads []}}
 
             :project/tests
@@ -36,13 +37,13 @@
              :output-dir       "resources/public/js/tests"
              :asset-path       "js/tests"
              :modules          {:shared {}
-                                :main   {:init-fn    com.vadelabs.turbo.hooks-test/start
-                                         :entries    [com.vadelabs.turbo.dom-test]
+                                :main   {:init-fn    com.vadelabs.turbo.layouts-test/start
+                                         :entries    [com.vadelabs.turbo.layouts-test]
                                          :depends-on #{:shared}}}
              :compiler-options {:devcards           true
                                 :output-feature-set :es8
                                 :output-wrapper false}
              :build-options {:ns-aliases {devcards-marked cljsjs.marked
                                           devcards-syntax-highlighter cljsjs.highlight}}
-             :devtools {:after-load com.vadelabs.turbo.hooks-test/restart
+             :devtools {:after-load com.vadelabs.turbo.layouts-test/restart
                         :preloads []}}}}

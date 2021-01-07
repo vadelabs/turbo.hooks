@@ -1,5 +1,9 @@
 {:deps
- {}
+ {com.vadelabs/turbo   {:local/root "../turbo"}
+  com.vadelabs/turbo.sections {:local/root "../turbo.sections"}
+  com.vadelabs/turbo.ui {:local/root "../turbo.ui"}
+  com.vadelabs/turbo.dom {:local/root "../turbo.dom"}
+  com.vadelabs/turbo.hooks {:local/root "../turbo.hooks"}}
 
  :aliases
  {:env/develop {:extra-paths ["card" "test" "develop"]
